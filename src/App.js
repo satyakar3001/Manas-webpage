@@ -1,0 +1,91 @@
+import React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Container from '@mui/material/Container';
+import Hero from './components/Hero';
+import About from './components/About';
+import Books from './components/Books';
+import Courses from './components/Courses';
+import Podcast from './components/Podcast';
+import Testimonials from './components/Testimonials';
+import Footer from './components/Footer';
+import heroContent from './content/hero.json';
+import aboutContent from './content/about.json';
+
+const navItems = [
+  { label: 'HOME', id: 'home' },
+  { label: 'ABOUT', id: 'about' },
+  { label: 'WORKSHOP', id: 'workshop' },
+  { label: 'BOOKS', id: 'books' },
+  { label: 'COURSES', id: 'courses' },
+  { label: 'BLOG', id: 'blog' },
+  { label: 'PODCAST', id: 'podcast' },
+  { label: 'CONTACT', id: 'contact' },
+];
+
+function App() {
+  React.useEffect(() => {
+    document.documentElement.style.scrollBehavior = 'smooth';
+    return () => {
+      document.documentElement.style.scrollBehavior = '';
+    };
+  }, []);
+
+  return (
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static" color="primary">
+        <Container maxWidth="lg">
+          <Toolbar disableGutters>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              Manas Kumar
+            </Typography>
+            {navItems.map((item) => (
+              <Button
+                key={item.id}
+                color="inherit"
+                sx={{ ml: 1 }}
+                component="a"
+                href={`#${item.id}`}
+              >
+                {item.label}
+              </Button>
+            ))}
+          </Toolbar>
+        </Container>
+      </AppBar>
+      {/* Main Content with section ids */}
+      <Box component="main">
+        <Box id="home"><Hero content={heroContent} /></Box>
+        <Box id="about"><About content={aboutContent} /></Box>
+        <Box id="workshop" sx={{ minHeight: '40vh', bgcolor: 'grey.100', py: 8 }}>
+          <Container maxWidth="lg">
+            <Typography variant="h3" align="center" gutterBottom>WORKSHOP</Typography>
+            <Typography align="center" color="text.secondary">Placeholder for Workshop section.</Typography>
+          </Container>
+        </Box>
+        <Box id="books"><Books /></Box>
+        <Box id="courses"><Courses /></Box>
+        <Box id="blog" sx={{ minHeight: '40vh', bgcolor: 'grey.100', py: 8 }}>
+          <Container maxWidth="lg">
+            <Typography variant="h3" align="center" gutterBottom>BLOG</Typography>
+            <Typography align="center" color="text.secondary">Placeholder for Blog section.</Typography>
+          </Container>
+        </Box>
+        <Box id="podcast"><Podcast /></Box>
+        <Box id="contact" sx={{ minHeight: '40vh', bgcolor: 'grey.100', py: 8 }}>
+          <Container maxWidth="lg">
+            <Typography variant="h3" align="center" gutterBottom>CONTACT</Typography>
+            <Typography align="center" color="text.secondary">Placeholder for Contact section.</Typography>
+          </Container>
+        </Box>
+        <Testimonials />
+      </Box>
+      <Footer />
+    </Box>
+  );
+}
+
+export default App;
