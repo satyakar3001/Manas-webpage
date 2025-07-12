@@ -1,11 +1,12 @@
 {
   "title": "BOOKS",
-  "description": "Manas has written 17 inspirational books, winning 46 International Book Awards, the FIRST Indian Author to have done so. Translated into 11 foreign languages. #1 bestsellers.",
+  "description": "Your books description here...",
   "books": [
-    { "title": "Book 1", "description": "Placeholder book description", "image": "https://source.unsplash.com/random?book=1" },
-    { "title": "Book 2", "description": "Placeholder book description", "image": "https://source.unsplash.com/random?book=2" },
-    { "title": "Book 3", "description": "Placeholder book description", "image": "https://source.unsplash.com/random?book=3" },
-    { "title": "Book 4", "description": "Placeholder book description", "image": "https://source.unsplash.com/random?book=4" }
+    {
+      "title": "You are a superhero!",
+      "description": "3 secrets for youth to shine.",
+      "image": "https://your-book-image.jpg"
+    }
   ],
   "cta": "READ NOW"
-} 
+}
