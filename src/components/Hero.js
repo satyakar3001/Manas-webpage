@@ -1,66 +1,66 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import Paper from '@mui/material/Paper';
+import React from "react";
+import Slider from "react-slick";
+import heroContent from '../content/hero.json';
 
-const Hero = ({ content }) => {
-  const {
-    title = 'THE GENIUS CODE',
-    subtitle = 'Internationally acclaimed motivational speaker with 30 years of experience',
-    cta = 'BOOK NOW',
-    image = 'https://source.unsplash.com/random?motivational',
-  } = content || {};
+const images = [
+  "/images/image1.jpeg",
+  "/images/image2.jpeg"
+];
+
+const Hero = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 100,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  };
 
   return (
-    <Paper
-      sx={{
-        position: 'relative',
-        backgroundColor: 'grey.800',
-        color: '#fff',
-        mb: 4,
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundImage: `url(${image})`,
-        minHeight: '60vh',
-        display: 'flex',
-        alignItems: 'center',
-      }}
-    >
-      {/* Increase the priority of the hero background image */}
-      <Box
-        sx={{
-          position: 'absolute',
-          top: 0,
-          bottom: 0,
-          right: 0,
-          left: 0,
-          backgroundColor: 'rgba(0,0,0,.3)',
-        }}
-      />
-      <Container maxWidth="lg">
-        <Box
-          sx={{
-            position: 'relative',
-            p: { xs: 3, md: 6 },
-            pr: { md: 0 },
+    <div style={{ background: '#222', padding: '60px 0 40px 0' }}>
+      <div style={{ width: '100%', maxWidth: 700, margin: '0 auto', textAlign: 'center' }}>
+        <h1 style={{ color: '#fff', fontSize: '2.5rem', marginBottom: '1rem', fontWeight: 700 }}>
+          {heroContent.title}
+        </h1>
+        <h2 style={{ color: '#fff', fontWeight: 400, marginBottom: '2rem', fontSize: '1.3rem' }}>
+          {heroContent.subtitle}
+        </h2>
+        <a
+          href={heroContent.image}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: 'inline-block',
+            background: '#1976d2',
+            color: '#fff',
+            padding: '0.75rem 2rem',
+            borderRadius: '4px',
+            textDecoration: 'none',
+            marginBottom: '2.5rem',
+            fontWeight: 500,
+            fontSize: '1.1rem'
           }}
         >
-          <Typography variant="h2" color="inherit" gutterBottom>
-            {title}
-          </Typography>
-          <Typography variant="h4" color="inherit" paragraph>
-            {subtitle}
-          </Typography>
-          <Button variant="contained" size="large" sx={{ mt: 2 }}>
-            {cta}
-          </Button>
-        </Box>
-      </Container>
-    </Paper>
+          {heroContent.cta}
+        </a>
+      </div>
+      <div style={{ width: '100%', maxWidth: 450, margin: '2rem auto 0 auto' }}>
+        <Slider {...settings}>
+          {images.map((src, idx) => (
+            <div key={idx} style={{ display: 'flex', justifyContent: 'center' }}>
+              <img
+                src={src}
+                alt={`slide-${idx}`}
+                style={{ width: '100%', height: '40vh', objectFit: 'cover', borderRadius: '8px' }}
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </div>
   );
 };
 
-export default Hero; 
+export default Hero;

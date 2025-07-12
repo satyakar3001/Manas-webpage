@@ -10,6 +10,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 const Footer = () => {
   return (
@@ -27,9 +28,9 @@ const Footer = () => {
     >
       <Container maxWidth="lg">
         <Grid container spacing={4}>
-          <Grid item xs={12} md={4}>
+          {/* <Grid item xs={12} md={4}>
             <Typography variant="h6" color="text.primary" gutterBottom>
-              Manas Kumar
+              Manas Behera
             </Typography>
             <Typography variant="body2" color="text.secondary" paragraph>
               CEO & Chief Facilitator
@@ -41,20 +42,20 @@ const Footer = () => {
               I sincerely believe that there is a far better future that we can make, even when we 
               believe that we are doing our best."
             </Typography>
-          </Grid>
+          </Grid> */}
           
           <Grid item xs={12} md={4}>
             <Typography variant="h6" color="text.primary" gutterBottom>
               Contact Information
             </Typography>
+            {/* <Typography variant="body2" color="text.secondary" paragraph>
+              Phone: +91 
+            </Typography> */}
             <Typography variant="body2" color="text.secondary" paragraph>
-              Phone: +91 9967734215
+              Email: manas.behera5@gmail.com
             </Typography>
             <Typography variant="body2" color="text.secondary" paragraph>
-              Email: manas@manas-kumar.com
-            </Typography>
-            <Typography variant="body2" color="text.secondary" paragraph>
-              Address: Placeholder address
+              Address: Bengaluru, India
             </Typography>
           </Grid>
           
@@ -63,24 +64,27 @@ const Footer = () => {
               Stay Connected
             </Typography>
             <Box sx={{ mb: 2 }}>
-              <IconButton color="primary" aria-label="Facebook">
+              <IconButton color="primary" aria-label="Facebook" href="https://www.facebook.com/ManasBR">
                 <FacebookIcon />
               </IconButton>
-              <IconButton color="primary" aria-label="Twitter">
+              {/* <IconButton color="primary" aria-label="Twitter">
                 <TwitterIcon />
-              </IconButton>
-              <IconButton color="primary" aria-label="YouTube">
+              </IconButton> */}
+              {/* <IconButton color="primary" aria-label="Whatsapp" href="">
                 <YouTubeIcon />
-              </IconButton>
-              <IconButton color="primary" aria-label="Instagram">
+              </IconButton> */}
+              <IconButton color="primary" aria-label="Instagram" href="https://www.instagram.com/manasbehera_3.0/">
                 <InstagramIcon />
               </IconButton>
-              <IconButton color="primary" aria-label="LinkedIn">
+              <IconButton color="primary" aria-label="LinkedIn" href="https://www.linkedin.com/in/manas-behera-699b2b17">
                 <LinkedInIcon />
+              </IconButton>
+              <IconButton color="primary" aria-label="WhatsApp" href="https://whatsapp.com/channel/0029VaLZd5rGE56e2UOIJA24" target="_blank" rel="noopener noreferrer">
+                <WhatsAppIcon />
               </IconButton>
             </Box>
             <Typography variant="body2" color="text.secondary">
-              Follow us on social media for the latest updates and inspirational content.
+              Follow me on social media for the latest updates and inspirational content.
             </Typography>
           </Grid>
         </Grid>
@@ -89,7 +93,7 @@ const Footer = () => {
           <Grid container spacing={2} justifyContent="space-between" alignItems="center">
             <Grid item>
               <Typography variant="body2" color="text.secondary">
-                © 2025 Copyrights Manas Kumar. All rights reserved.
+                © 2025 Copyrights Manas Behera. All rights reserved.
               </Typography>
             </Grid>
             <Grid item>
@@ -97,15 +101,15 @@ const Footer = () => {
                 <Link href="#" color="inherit" underline="hover">
                   Privacy Policy
                 </Link>
-                <Link href="#" color="inherit" underline="hover">
+                {/* <Link href="#" color="inherit" underline="hover">
                   Contact Us
-                </Link>
+                </Link> */}
                 <Link href="#" color="inherit" underline="hover">
                   Terms and Conditions
                 </Link>
-                <Link href="#" color="inherit" underline="hover">
+                {/* <Link href="#" color="inherit" underline="hover">
                   Books
-                </Link>
+                </Link> */}
               </Box>
             </Grid>
           </Grid>

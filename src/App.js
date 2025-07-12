@@ -7,23 +7,25 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Hero from './components/Hero';
 import About from './components/About';
-import Books from './components/Books';
-import Courses from './components/Courses';
-import Podcast from './components/Podcast';
-import Testimonials from './components/Testimonials';
+// import Books from './components/Books';
+// import Courses from './components/Courses';
+// import Podcast from './components/Podcast';
+// import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
 import heroContent from './content/hero.json';
 import aboutContent from './content/about.json';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const navItems = [
   { label: 'HOME', id: 'home' },
   { label: 'ABOUT', id: 'about' },
-  { label: 'WORKSHOP', id: 'workshop' },
-  { label: 'BOOKS', id: 'books' },
-  { label: 'COURSES', id: 'courses' },
+  // { label: 'WORKSHOP', id: 'workshop' },
+  // { label: 'BOOKS', id: 'books' },
+  // { label: 'COURSES', id: 'courses' },
   { label: 'BLOG', id: 'blog' },
-  { label: 'PODCAST', id: 'podcast' },
-  { label: 'CONTACT', id: 'contact' },
+  // { label: 'PODCAST', id: 'podcast' },
+  { label: 'CONTACT', id: 'footer' },
 ];
 
 function App() {
@@ -40,7 +42,7 @@ function App() {
         <Container maxWidth="lg">
           <Toolbar disableGutters>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-              Manas Kumar
+              Manas Behera
             </Typography>
             {navItems.map((item) => (
               <Button
@@ -60,30 +62,39 @@ function App() {
       <Box component="main">
         <Box id="home"><Hero content={heroContent} /></Box>
         <Box id="about"><About content={aboutContent} /></Box>
-        <Box id="workshop" sx={{ minHeight: '40vh', bgcolor: 'grey.100', py: 8 }}>
-          <Container maxWidth="lg">
-            <Typography variant="h3" align="center" gutterBottom>WORKSHOP</Typography>
-            <Typography align="center" color="text.secondary">Placeholder for Workshop section.</Typography>
+        {/* <Box id="books"><Books /></Box> */}
+        {/* <Box id="courses"><Courses /></Box> */}
+        <Box id="blog" sx={{ minHeight: '20vh', bgcolor: 'grey.100', py: 3 }}>
+          <Container maxWidth="md" sx={{ py: 0 }}>
+            <Typography variant="h3" align="center" gutterBottom>Blogs and Podcast</Typography>
+            <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mt: 2 }}>
+              <Button
+                variant="contained"
+                color="primary"
+                href="https://medium.com/@manasranjan_8164"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Blogs
+              </Button>
+              <Button
+                variant="contained"
+                color="secondary"
+                href="https://open.spotify.com/show/0rQDU5PP2BHYPGJIv7Tunu?si=hL6wmYXiRPSPAgMfEakFaw"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Podcast
+              </Button>
+            </Box>
           </Container>
         </Box>
-        <Box id="books"><Books /></Box>
-        <Box id="courses"><Courses /></Box>
-        <Box id="blog" sx={{ minHeight: '40vh', bgcolor: 'grey.100', py: 8 }}>
-          <Container maxWidth="lg">
-            <Typography variant="h3" align="center" gutterBottom>BLOG</Typography>
-            <Typography align="center" color="text.secondary">Placeholder for Blog section.</Typography>
-          </Container>
-        </Box>
-        <Box id="podcast"><Podcast /></Box>
-        <Box id="contact" sx={{ minHeight: '40vh', bgcolor: 'grey.100', py: 8 }}>
-          <Container maxWidth="lg">
-            <Typography variant="h3" align="center" gutterBottom>CONTACT</Typography>
-            <Typography align="center" color="text.secondary">Placeholder for Contact section.</Typography>
-          </Container>
-        </Box>
-        <Testimonials />
+        {/* <Box id="podcast"><Podcast /></Box> */}
+        {/* <Testimonials /> */}
       </Box>
-      <Footer />
+      <div id="footer">
+        <Footer />
+      </div>
     </Box>
   );
 }

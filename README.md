@@ -1,7 +1,7 @@
-# Manas Kumar Website - Content Editing Guide
+# Manas Behera Website - Content Editing Guide
 
 ## 📋 Overview
-This is a React-based website for Manas Kumar. All content (text, images, links) can be edited through simple JSON files - **no coding experience required!**
+This is a React-based website for Manas Behera. All content (text, images, links) can be edited through simple JSON files - **no coding experience required!**
 
 ## 🚀 Quick Start
 1. **Start the website**: Open terminal in the project folder and run `npm start`
@@ -40,7 +40,7 @@ All editable content is located in: `src/content/` folder
 **Example**:
 ```json
 {
-  "title": "Welcome to Manas Kumar's World",
+        "title": "Welcome to Manas Behera's World",
   "subtitle": "Inspiring millions through words and workshops",
   "cta": "JOIN NOW",
   "image": "https://your-image-url.com/image.jpg"
@@ -68,7 +68,7 @@ All editable content is located in: `src/content/` folder
     "Your third paragraph here..."
   ],
   "quote": "Your inspirational quote here...",
-  "name": "Manas Kumar",
+  "name": "Manas Behera",
   "role": "CEO & Chief Facilitator",
   "avatar": "MK"
 }
@@ -194,7 +194,7 @@ All editable content is located in: `src/content/` folder
 **Example**:
 ```json
 {
-  "name": "Manas Kumar",
+  "name": "Manas Behera",
   "role": "CEO & Chief Facilitator",
   "quote": "Your quote here...",
   "contact": {
@@ -206,7 +206,7 @@ All editable content is located in: `src/content/` folder
     { "label": "Facebook", "icon": "facebook" },
     { "label": "Twitter", "icon": "twitter" }
   ],
-  "copyright": "© 2025 Copyrights Manas Kumar. All rights reserved.",
+  "copyright": "© 2025 Copyrights Manas Behera. All rights reserved.",
   "links": [
     { "label": "Privacy Policy", "href": "#" },
     { "label": "Contact Us", "href": "#" }
