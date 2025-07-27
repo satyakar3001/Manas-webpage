@@ -64,10 +64,10 @@ function App() {
         <Box id="about"><About content={aboutContent} /></Box>
         {/* <Box id="books"><Books /></Box> */}
         {/* <Box id="courses"><Courses /></Box> */}
-        <Box id="blog" sx={{ minHeight: '20vh', bgcolor: 'grey.100', py: 3 }}>
-          <Container maxWidth="md" sx={{ py: 0 }}>
+        <Box id="blog" sx={{ bgcolor: 'grey.100', py: 4 }}>
+          <Container maxWidth="md">
             <Typography variant="h3" align="center" gutterBottom>Blogs and Podcast</Typography>
-            <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mt: 2 }}>
+            <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mt: 3, mb: 2 }}>
               <Button
                 variant="contained"
                 color="primary"
