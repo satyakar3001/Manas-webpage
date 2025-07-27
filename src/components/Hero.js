@@ -3,8 +3,8 @@ import Slider from "react-slick";
 import heroContent from '../content/hero.json';
 
 const images = [
-  "/images/image1.jpeg",
-  "/images/image2.jpeg"
+  process.env.PUBLIC_URL + "/images/image1.jpeg",
+  process.env.PUBLIC_URL + "/images/image2.jpeg"
 ];
 
 const Hero = () => {
