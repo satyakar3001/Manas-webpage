@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Manas-webpage/static/css/main.4e410301.css",
-    "main.js": "/Manas-webpage/static/js/main.2dea3345.js",
+    "main.js": "/Manas-webpage/static/js/main.eae14937.js",
     "static/js/488.476f1eb1.chunk.js": "/Manas-webpage/static/js/488.476f1eb1.chunk.js",
     "service-worker.js": "/Manas-webpage/service-worker.js",
     "static/media/slick.svg": "/Manas-webpage/static/media/slick.2630a3e3eab21c607e21.svg",
@@ -10,11 +10,11 @@
     "static/media/slick.woff": "/Manas-webpage/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Manas-webpage/index.html",
     "main.4e410301.css.map": "/Manas-webpage/static/css/main.4e410301.css.map",
-    "main.2dea3345.js.map": "/Manas-webpage/static/js/main.2dea3345.js.map",
+    "main.eae14937.js.map": "/Manas-webpage/static/js/main.eae14937.js.map",
     "488.476f1eb1.chunk.js.map": "/Manas-webpage/static/js/488.476f1eb1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4e410301.css",
-    "static/js/main.2dea3345.js"
+    "static/js/main.eae14937.js"
   ]
 }
